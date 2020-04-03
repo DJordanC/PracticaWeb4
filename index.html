@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="imgs/icono.jpg">
+  
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+    
+
+    <title> Formulario de registro de pacientes </title>
+  </head>
+  <body style="background: url(imgs/medicina1.jpg); background-size: cover; background-position: absolute;">
+    <div class="container d-flex" style="width: 85%; background: white; opacity: 95%; padding: 0; margin-top: 200px;"> 
+     <img src="imgs/ver.jpg" alt="" style="width: 40%;">
+    
+     <form action=""  method="post" id="formulario" class="p-4" style="width: 60%;">
+     <h1 class="text-dark p-3">
+        Registro de Pacientes
+     </h1>
+        <div class="form-group ">
+        <label for="" class="col-sm-2 col-form-label"><strong>Cédula</strong></label>
+        <div class="col-sm-10">
+        <input type="number" class="form-control"  id="cedula" placeholder="Cédula" >
+        </div>
+        </div>
+
+        <div class="form-group ">
+        <label for="" class="col-sm-2 col-form-label text-dark"><strong>Nombre</strong></label>
+          <div class="col-sm-10">
+          <input type="text" class="form-control"  id="nombre" pattern="[A-Za-z]+" placeholder="nombre"  maxlength="20">
+          </div>
+        </div>
+       
+        <div class="form-group ">
+        <label for="" class="col-sm-2 col-form-label text-dark"><strong>Apellido</strong></label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control"  id="apellido" placeholder="apellido" >
+        </div>
+        </div>
+
+        <div class="form-group ">
+        <label for="" class="col-sm-2 col-form-label text-dark"><strong>Edad</strong></label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control"  id="edad" placeholder="edad" >
+        </div>
+        </div>
+
+        <div class="form-group ">
+        <label for="" class="col-sm-2 col-form-label text-dark"><strong>Fecha de Ingreso</strong></label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control"  id="fecha" placeholder="fecha" >
+        </div>
+        </div>
+
+        <button class="btn btn-primary" style="margin-left: 150px;" type="submit" value="Enviar" onclick="enviar()">INCLUIR</button>
+        <button class="btn btn-primary" style="margin-left: 50px;" type="reset">CANCELAR</button>
+
+<script>
+    function enviar(){
+
+      var cedula = document.getElementById('cedula').value;
+      var nombre = document.getElementById('nombre').value;
+      var apellido = document.getElementById('apellido').value;
+      var edad = document.getElementById('edad').value;
+      var fecha = document.getElementById('fecha').value;
+
+      if (cedula == "") {
+        alert ("El campo cedula esta Vacio");
+        return;
+      }
+      if (nombre == "") {
+        alert ("El campo Nombre esta Vacio");
+        return;
+      }
+      var apellido = document.getElementById('apellido').value;
+      if (nombre == "") {
+        alert ("El campo Apellido esta Vacio");
+        return;
+      }
+      var edad = document.getElementById('edad').value;
+      if (nombre == "") {
+        alert ("El campo Edad esta Vacio");
+        return;
+      }
+      var fecha = document.getElementById('fecha').value;
+      if (nombre == "") {
+        alert ("El campo fecha esta Vacio");
+        return;
+      }
+    }
+
+</script>
+
+
+      </form>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
